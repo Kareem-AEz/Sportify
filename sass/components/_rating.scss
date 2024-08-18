@@ -1,0 +1,40 @@
+.rating {
+	align-self: center;
+
+	&--main-olive {
+		img {
+			border: 0.4rem solid $color-main-olive;
+		}
+	}
+	&--sec-olive {
+		img {
+			border: 0.4rem solid $color-sec-olive;
+		}
+	}
+
+	&__reviews {
+		display: flex;
+
+		img {
+			height: 2.8rem;
+			width: 2.8rem;
+			border-radius: 50%;
+
+			box-sizing: content-box;
+
+			&:not(:last-child) {
+				margin-right: -0.6rem;
+			}
+		}
+	}
+	&__stars {
+		display: flex;
+		gap: 0.2rem;
+	}
+	&__star {
+		fill: $color-sec-gold;
+
+		height: 1.2rem;
+		width: 1.2rem;
+	}
+}

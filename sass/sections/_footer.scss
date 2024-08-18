@@ -1,0 +1,151 @@
+.footer {
+	display: grid;
+	grid-template-rows:
+		[nav-start] min-content [nav-end] var(--gap-sm)
+		[form-start] min-content [form-end] var(--gap-lg)
+		[cta-start] min-content [cta-end];
+	row-gap: var(--gap-sm);
+
+	background-image: linear-gradient(
+			rgba($color-sec-olive, 0.8),
+			rgba($color-sec-olive, 0.6)
+		),
+		url(/img/footer.webp);
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	@include respond-to(xsmall) {
+		grid-template-rows:
+			[nav-start] min-content [nav-end] auto
+			[form-start] min-content [form-end] auto
+			[cta-start] min-content [cta-end];
+	}
+
+	&__nav {
+		grid-row: nav-start/ nav-end;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include respond-to(xsmall) {
+			flex-direction: column;
+			gap: 1.8rem;
+		}
+	}
+
+	&__logo {
+		height: calc(var(--logo-y-fact) * var(--logo-footer-size));
+		width: calc(var(--logo-x-fact) * var(--logo-footer-size));
+
+		fill: $color-main-cream;
+	}
+
+	&__list {
+		display: flex;
+		gap: var(--gap-2xs);
+	}
+
+	form {
+		grid-row: form-start / form-end;
+		justify-self: center;
+	}
+
+	&__cta {
+		grid-row: cta-start / cta-end;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include respond-to(xsmall) {
+			flex-direction: column;
+			align-items: start;
+
+			gap: var(--gap-sm);
+		}
+
+		span {
+			color: $color-main-gold;
+			font-size: 10rem;
+			font-weight: 600;
+			line-height: 0.9;
+			text-transform: uppercase;
+
+			@include respond-to(medium) {
+				font-size: 9rem;
+			}
+			@include respond-to(medium) {
+				font-size: 7.8rem;
+			}
+			@include respond-to(xsmall) {
+				font-size: 5.8rem;
+			}
+		}
+
+		.cta__icon {
+			position: relative;
+			margin-right: 1.8rem;
+
+			@include respond-to(xsmall) {
+				margin: 0;
+				margin-left: 1.8rem;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 100%;
+				height: 100%;
+				padding: 6rem;
+				transform: translate(-50%, -50%);
+				border: 0.4rem solid $color-main-gold;
+				border-radius: 2.6rem;
+
+				transition: padding 0.368s $ez-bz;
+
+				@include respond-to(xsmall) {
+					padding: 4.8rem;
+				}
+			}
+			&:hover::before {
+				padding: 6.4rem;
+				@include respond-to(xsmall) {
+					padding: 5.2rem;
+				}
+			}
+			&:link,
+			&:visited {
+				padding: 1.8rem;
+				background-color: $color-main-gold;
+				border-radius: 1.8rem;
+
+				svg {
+					width: 7.2rem;
+					height: 7.2rem;
+					fill: $color-main-olive;
+
+					transition: transform 0.368s $ez-bz;
+
+					@include respond-to(medium) {
+						width: 6.4rem;
+						height: 6.4rem;
+					}
+					@include respond-to(xsmall) {
+						width: 5.2rem;
+						height: 5.2rem;
+					}
+				}
+			}
+
+			&:hover,
+			&:active {
+				svg {
+					transform: translate(0.8rem, -0.8rem);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,81 @@
+.events {
+	position: relative;
+	border-top-right-radius: 2.6rem;
+	border-top-left-radius: 2.6rem;
+	overflow: hidden;
+
+	display: grid;
+	grid-template-rows: var(--gap-section-title) auto var(--gap-slidder-buttons);
+	grid-template-columns: 1fr max-content 1fr;
+
+	&::before,
+	&::after {
+		content: "";
+		user-select: none;
+		pointer-events: none;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&::before {
+		background-image: url(../../Sportify-Pattern.svg);
+		background-size: cover;
+		background-size: 30rem;
+
+		opacity: 0.1;
+	}
+	&::after {
+		pointer-events: none;
+		user-select: none;
+		background-image: linear-gradient(
+			to top,
+			rgba($color-main-cream, 1),
+			rgba($color-main-cream, 0) 20% 80%,
+			rgba($color-main-cream, 1)
+		);
+	}
+
+	&__title {
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+		font-weight: 700;
+		color: $color-main-olive;
+		z-index: 3;
+	}
+
+	&__btn {
+		grid-row: 3 / 4;
+		grid-column: 2 /3;
+
+		align-self: end;
+		justify-self: center;
+
+		z-index: 99;
+	}
+
+	&__doodle {
+		&-1,
+		&-2 {
+			fill: $color-main-olive;
+
+			height: 12.2rem;
+			width: 12.2rem;
+		}
+
+		&-1 {
+			justify-self: end;
+			@include respond-to(2xsmall) {
+				transform: rotate(30deg);
+			}
+		}
+
+		&-2 {
+			grid-row: 1/2;
+			grid-column: 3 / 4;
+			justify-self: start;
+		}
+	}
+}

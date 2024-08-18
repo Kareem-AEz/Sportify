@@ -1,0 +1,18 @@
+// bad approach
+/*
+.container {
+	display: grid;
+		
+	grid-template-columns:
+		minmax(4rem, 1fr) [full-start]  4rem [content-full-start] 4rem [content-start]
+		repeat(8, [col] minmax(min-content, 14rem) [col])
+		[content-end] 4rem [content-full-end] 4rem [full-end] minmax(4rem, 1fr);
+
+	justify-content: center;
+}
+*/
+
+.container{
+    max-width: 132rem;
+    margin: 0 auto;
+}

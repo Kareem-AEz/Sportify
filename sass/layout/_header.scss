@@ -1,0 +1,85 @@
+.header {
+	position: absolute;
+	width: 100%;
+
+	margin-top: var(--gap-sm);
+	height: var(--header-height);
+	z-index: 9;
+	color: $color-main-cream;
+
+	&__logo {
+		// hard coded
+		// height: 3.4rem;
+		// width: 17.4rem;
+
+		height: calc(var(--logo-y-fact) * var(--logo-size));
+		width: calc(var(--logo-x-fact) * var(--logo-size));
+
+		fill: currentColor;
+	}
+
+	&__nav {
+		padding-left: var(--gutter-full);
+		padding-right: var(--gutter-full);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: var(--gap-sm);
+
+		// margin-left: auto;
+
+		@include respond-to(xsmall) {
+			display: none;
+		}
+	}
+
+	&__item {
+		position: relative;
+
+		&:not(:last-child):after {
+			content: "";
+			border-bottom: 2px solid currentColor;
+
+			// for mid grow
+			// transform-origin: center;
+			// transform: scaleX(0);
+			// width: 100%;
+
+			// for start grow
+			width: 0%;
+
+			position: absolute;
+			bottom: 0;
+			left: 0;
+
+			transition: width 0.2681s, transform 0.2681s;
+			transition-timing-function: $ez-bz;
+		}
+
+		&:hover::after {
+			// for mid grow
+			// transform: scaleX(1);
+
+			// for start grow
+			width: 100%;
+		}
+	}
+
+	&__burger {
+		svg {
+			height: 3.4rem;
+			width: 3.4rem;
+			fill: $color-main-cream;
+		}
+		display: none;
+
+		@include respond-to(xsmall) {
+			display: block;
+		}
+	}
+}

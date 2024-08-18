@@ -1,0 +1,183 @@
+.mini-card {
+	display: grid;
+	grid-template-columns: 4.8rem 9rem auto;
+	grid-template-rows: auto auto;
+	justify-content: center;
+	align-items: center;
+
+	column-gap: var(--gap-2xs);
+
+	padding: $padding;
+	padding-left: 0.8rem;
+
+	overflow: hidden;
+
+	border-radius: 1.6rem;
+
+	font-size: 1.4rem;
+
+	background-color: $color-main-cream;
+
+	cursor: pointer;
+
+	position: relative;
+
+	&__title {
+		font-size: 1.6rem;
+		font-weight: 600;
+		color: $color-main-olive;
+	}
+	&__icon-main {
+		grid-row: 1/-1;
+
+		fill: $color-main-olive;
+		height: 4rem;
+		width: 4rem;
+
+		z-index: 1;
+	}
+	&__icon {
+		fill: currentColor;
+		height: 1.8rem;
+		width: 1.8rem;
+	}
+
+	&__star {
+		fill: $color-sec-gold;
+		height: 1rem;
+		width: 1rem;
+	}
+
+	&__participants,
+	&__distance {
+		display: flex;
+		gap: 0.4rem;
+		align-self: center;
+
+		font-weight: 600;
+		color: $color-grey-1;
+	}
+
+	&__participants {
+		grid-column: 2/3;
+	}
+
+	&__distance {
+		grid-column: 3/-1;
+		grid-row: 1/2;
+	}
+
+	&__rating {
+		align-self: center;
+
+		display: flex;
+		gap: 0.2rem;
+	}
+
+	&::before,
+	&--top::before {
+		content: "";
+
+		border-radius: 1.6rem;
+
+		width: 5.8rem;
+		height: 5.8rem;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		transition: height 0.261s $ez-bz;
+	}
+
+	&::before {
+		background-color: $color-acc-cyan;
+	}
+
+	&--top::before {
+		background-color: $color-acc-gold;
+	}
+
+	// interactivity
+
+	&__title,
+	&__distance {
+		transform: translateY(0.8rem);
+		transition: transform 0.361s;
+		transition-timing-function: $ez-bz;
+	}
+
+	&__rating,
+	&__participants {
+		opacity: 0;
+		transform: translateY(1rem);
+		transition: transform 0.361s, opacity 0.361s;
+		transition-timing-function: $ez-bz;
+	}
+
+	transition: padding 0.261s, transform 0.261s;
+	transition-timing-function: $ez-bz;
+
+	&:hover {
+		transform: translateY(-0.4rem);
+		padding-bottom: 2.4rem;
+
+		&__rating,
+		&__participants {
+			opacity: 1;
+			transform: translateY(1rem);
+		}
+
+		&::before {
+			height: 7.6rem;
+		}
+	}
+
+	&:has(+ &:hover) {
+		transform: translateY(-1.2rem);
+	}
+
+	&:has(+ & + &:hover) {
+		transform: translateY(-0.6rem);
+	}
+
+	&:hover + & {
+		transform: translateY(-1.2rem);
+	}
+	&:hover + & + & {
+		transform: translateY(-0.6rem);
+	}
+
+	&:hover &__rating,
+	&:hover &__participants {
+		opacity: 1;
+		transform: translateY(0.5rem);
+	}
+	&:hover &__title,
+	&:hover &__distance {
+		transform: translateY(0.2rem);
+	}
+
+	// first appearances
+	&:nth-child(1) {
+		animation: mini-card-debut 0.468s $ez-bz 0.168s backwards;
+	}
+	&:nth-child(2) {
+		animation: mini-card-debut 0.568s $ez-bz 0.231s backwards;
+	}
+	&:nth-child(3) {
+		animation: mini-card-debut 0.668s $ez-bz 0.287s backwards;
+	}
+}
+
+@keyframes mini-card-debut {
+	from {
+		opacity: 0;
+		transform: translateY(1rem);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0rem);
+	}
+}

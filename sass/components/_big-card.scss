@@ -1,0 +1,103 @@
+.big-card {
+	display: grid;
+	grid-template-columns: 55fr 45fr;
+
+	height: 40rem;
+	background-color: $color-main-olive;
+	box-shadow: $box-shadow-2;
+	border-radius: 3.2rem;
+	overflow: hidden;
+
+	@include respond-to(2xsmall) {
+		grid-template-columns: 50fr 50fr;
+	}
+
+	&__img {
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+		position: relative;
+		&::after {
+			content: "";
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			background-color: rgba($color-sec-olive, 0.5);
+			z-index: 999;
+		}
+	}
+	.stats {
+		padding-left: var(--gap-2xs);
+	}
+	.rating {
+		padding-left: var(--gap-2xs);
+	}
+
+	&__details {
+		display: grid;
+		grid-template-rows: min-content min-content 1.8fr 1fr 2fr;
+		row-gap: var(--gap-2xs);
+
+		padding: $padding-vertical;
+	}
+
+	&__title {
+		font-size: 2.6rem;
+		color: $color-main-cream;
+	}
+
+	.stats {
+		align-self: end;
+	}
+
+	&__btn {
+		justify-self: start;
+		align-self: end;
+
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		&:hover,
+		&:active {
+			svg {
+				transform: translateX(0.6rem);
+			}
+		}
+
+		svg {
+			height: 1.4rem;
+			width: 1.4rem;
+
+			transition: transform 0.268s $ez-bz;
+		}
+	}
+}
+
+.gallery {
+	grid-column: 1 / -1;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(45rem, 0.6fr));
+	grid-template-rows: 1fr;
+	justify-content: center;
+	column-gap: 6.5rem;
+	row-gap: 4.5rem;
+
+	z-index: 3;
+
+	@include respond-to(medium) {
+		grid-template-columns: repeat(auto-fit, minmax(45rem, 0.7fr));
+	}
+	@include respond-to(xsmall) {
+		grid-template-columns: repeat(auto-fit, minmax(45rem, 0.8fr));
+	}
+	@include respond-to(2xsmall) {
+		grid-template-columns: minmax(20rem, 1fr);
+	}
+}

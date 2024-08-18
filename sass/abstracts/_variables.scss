@@ -1,0 +1,99 @@
+/*      -----colors-----      */
+// colors main
+$color-main-olive: #033b30;
+$color-main-gold: #f5d31f;
+$color-main-cream: #f9f5e9;
+
+// colors secondary
+$color-sec-gold: #ffc107;
+$color-sec-olive: #314944;
+$color-sec-pink-light: #ffdbf1;
+$color-sec-pink-dark: #66003f;
+
+// colors accent
+$color-acc-cyan: #d1f0e3;
+$color-acc-gold: #ffef9e;
+$color-acc-olive: #314944;
+
+// colors neutral
+$color-black: #191919;
+$color-grey-1: #a1a1a1;
+$color-grey-2: #c9c5bc;
+$color-white: #fffefc;
+
+// shadows
+$box-shadow-1: 0 1rem 3rem rgba($color-black, 0.8);
+$box-shadow-2: 0 1rem 3rem rgba($color-black, 0.4);
+
+/*      -----fonts-----      */
+// fonts
+$font-family: "Poppins", sans-serif;
+$font-size-default: 1.4rem;
+
+/*      -----padding-----      */
+$padding: 0.8rem 1.6rem;
+$padding-default: 0.8rem 2.2rem;
+$padding-vertical: 1.8rem 1.6rem;
+
+/*      -----easing-----      */
+$ez-bz: cubic-bezier(0.2, 0, 0.4, 1);
+$ez-bzz: cubic-bezier(0.35, 0, 0.25, 1);
+
+:root {
+	/*      -----for growing links-----      */
+	--gl-padding: 0.4rem;
+	--gl-width: 15rem;
+	--gl-head: 4rem;
+
+	/*      -----gaps-----      */
+	--gap-3xs: 0.8rem;
+	--gap-2xs: 1.8rem;
+	--gap-xs: 2.8rem;
+	--gap-sm: 3.6rem;
+	--gap-md: 5.2rem;
+	--gap-lg: 6.2rem;
+	--gap-section-title: 12.8rem;
+	--gap-slidder-buttons: 7.2rem;
+	@include respond-to(small) {
+		--gap-3xs: 0.4rem;
+		--gap-2xs: 1.2rem;
+		--gap-xs: 2.2rem;
+		--gap-sm: 2.8rem;
+		--gap-md: 4.6rem;
+		--gap-lg: 5.2rem;
+		--gap-section-title: 9.8rem;
+		--gap-slidder-buttons: 6.2rem;
+	}
+
+	/*      -----gutter-----      */
+	--gutter-full: 7.8rem;
+	--gutter-content: 10rem;
+	--gutter-top: 9.4rem;
+	--gutter: 16.4rem;
+
+	--gutter-footer: 6.2rem;
+	@include respond-to(small) {
+		--gutter-full: 6.4rem;
+		--gutter-content: 8rem;
+		--gutter-top: 8.2rem;
+		--gutter: 14.4rem;
+
+		--gutter-footer: 5.2rem;
+	}
+	@include respond-to(2xsmall) {
+		--gutter-content: 5.8rem;
+		--gutter: 12.4rem;
+	}
+	@include respond-to(3xsmall) {
+		--gutter-content: 3.2rem;
+	}
+
+	/*      -----SVG sizing-----      */
+	--logo-footer-size: 4.2rem;
+	--logo-size: 3.6rem;
+	--logo-y-fact: 1;
+	--logo-x-fact: 3.94140625;
+
+	/*      -----sizes-----      */
+	--header-height: 3.8rem;
+}

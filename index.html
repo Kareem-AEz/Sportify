@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Sportify simplifies finding and joining local sports. Automatically discover nearby activities tailored to your skill level and interests. Play sports effortlessly with Sportify." />
+		<meta name="keywords" content="sports, local sports, join sports, sports activities, Sportify, sports near me" />
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="Sportify" />
+		<meta name="theme-color" content="#033b30" />
+	
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://yourwebsite.com" />
+		<meta property="og:title" content="Sportify &dash; Find Local Sports Activities Near You" />
+		<meta property="og:description" content="Sportify makes it easy to discover and participate in local sports activities. Find the perfect match for your skill level and preferences." />
+		<meta property="og:image" content="/icons/Sportify-Icon.jpg" />
+	
+		<!-- Twitter Cards -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Sportify - Find Local Sports Activities Near You" />
+		<meta name="twitter:description" content="Easily find and join local sports activities tailored to your interests and skills with Sportify." />
+		<meta name="twitter:image" content="/icons/Sportify-Icon.jpg" />
+	
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://yourwebsite.com" />
+	
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gupter:wght@400;500;700&family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+	
+		<!-- Icons & Manifest -->
+		<link rel="shortcut icon" href="/icons/Sportify-favicon.svg" type="image/svg+xml" />
+		<link rel="manifest" href="/manifest.json" />
+	
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="preload" href="css/styles.css" as="style" />
+	
+		<title>Sportify &dash; Find Local Sports Activities Near You</title>
+	</head>
+	
+	<body>
+		<header class="header">
+			<div class="container">
+				<nav class="header__nav">
+					<a href="#" title="sportify">
+						<svg class="header__logo">
+							<use xlink:href="sprite.svg#logo"></use>
+						</svg>
+					</a>
+
+					<ul class="header__list">
+						<li class="header__item">
+							<a class="header__link" href="#">Home</a>
+						</li>
+						<li class="header__item">
+							<a class="header__link" href="#">Sports</a>
+						</li>
+						<li class="header__item">
+							<a class="header__link" href="#">Events</a>
+						</li>
+						<li class="header__item">
+							<a class="header__link" href="#">How It Works</a>
+						</li>
+						<li class="header__item">
+							<a class="header__link btn" href="#">Sign Up</a>
+						</li>
+					</ul>
+
+					<div class="header__burger">
+						<svg>
+							<use xlink:href="/sprite.svg#burger"></use>
+						</svg>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<main class="container">
+			<section class="hero">
+				<div class="hero__content">
+					<h1>
+						local sports <em>made <br /><strong>simple</strong></em>
+					</h1>
+					<p>
+						Discover the best local sports with Sportify. Join a game, attend an
+						event, or stay active. Explore now and find your next favorite
+						sport.
+					</p>
+					<a href="#" class="btn">Stay active</a>
+				</div>
+				<div class="hero__mini-cards">
+					<article class="mini-card mini-card--top">
+						<svg class="mini-card__icon-main">
+							<use xlink:href="/sprite.svg#football"></use>
+						</svg>
+
+						<span class="mini-card__title">Football</span>
+
+						<div class="mini-card__participants">
+							<svg class="mini-card__icon">
+								<use xlink:href="/sprite.svg#participants"></use>
+							</svg>
+							<span>1.1K+</span>
+						</div>
+
+						<div class="mini-card__distance">
+							<svg class="mini-card__icon">
+								<use xlink:href="/sprite.svg#distance"></use>
+							</svg>
+							<span>3.2KM</span>
+						</div>
+
+						<div class="mini-card__rating">
+							<svg class="mini-card__star">
+								<use xlink:href="/sprite.svg#star"></use>
+							</svg>
+							<svg class="mini-card__star">
+								<use xlink:href="/sprite.svg#star"></use>
+							</svg>
+							<svg class="mini-card__star">
+								<use xlink:href="/sprite.svg#star"></use>
+							</svg>
+							<svg class="mini-card__star">
+								<use xlink:href="/sprite.svg#star"></use>
+							</svg>
+							<svg class="mini-card__star">
+								<use xlink:href="/sprite.svg#star"></use>
+							</svg>
+						</div>
+					</article>
+
+					<article class="mini-card">
+						<svg class="mini-card__icon-main">
+							<use xlink:href="/sprite.svg#tennis"></use>
+						</svg>
+
+						<span class="mini-card__title">Tennis</span>
+
+						<div class="mini-card__participants">
+							<svg class="mini-card__icon">
+								<use xlink:href="/sprite.svg#participants"></use>
+							</svg>
+							<span>210</span>
+						</div>
+
+						<div class="mini-card__distance">
+							<svg class="mini-card__icon">
+								<use xlink:href="/sprite.svg#distance"></use>
+							</svg>
+							<span>4.4KM</span>
+						</div>
+
+						<div class="mini-card__rating">
+							<svg class="mini-card__star">
+								<use xlink:href="/sprite.svg#star"></use>
+							</svg>
+							<svg class="mini-card__star">
+								<use xlink:href="/sprite.svg#star"></use>
+							</svg>
+							<svg class="mini-card__star">
+								<use xlink:href="/sprite.svg#star"></use>
+							</svg>
+							<svg class="mini-card__star">
+								<use xlink:href="/sprite.svg#star"></use>
+							</svg>
+						</div>
+					</article>
+
+					<article class="mini-card">
+						<svg class="mini-card__icon-main">
+							<use xlink:href="/sprite.svg#swimming"></use>
+						</svg>
+
+						<span class="mini-card__title">Swimming</span>
+
+						<div class="mini-card__participants">
+							<svg class="mini-card__icon">
+								<use xlink:href="/sprite.svg#participants"></use>
+							</svg>
+							<span>190</span>
+						</div>
+
+						<div class="mini-card__distance">
+							<svg class="mini-card__icon">
+								<use xlink:href="/sprite.svg#distance"></use>
+							</svg>
+							<span>6.1KM</span>
+						</div>
+
+						<div class="mini-card__rating">
+							<svg class="mini-card__star">
+								<use xlink:href="/sprite.svg#star"></use>
+							</svg>
+							<svg class="mini-card__star">
+								<use xlink:href="/sprite.svg#star"></use>
+							</svg>
+							<svg class="mini-card__star">
+								<use xlink:href="/sprite.svg#star"></use>
+							</svg>
+							<svg class="mini-card__star">
+								<use xlink:href="/sprite.svg#star"></use>
+							</svg>
+						</div>
+					</article>
+				</div>
+			</section>
+			<section class="sports">
+				<h2 class="sports__title">Sports Categories</h2>
+				<div class="slider">
+					<article class="medium-card--mt">&nbsp;</article>
+					<article class="medium-card--mt">&nbsp;</article>
+					<article class="medium-card medium-card--top">
+						<div class="medium-card__img">
+							<img src="img/card1.webp" alt="Football" />
+						</div>
+						<div class="bullets">
+							<span class="bullet bullet--top">TOP Sport</span>
+							<span class="bullet bullet--normal">12 - 45 Years</span>
+							<span class="bullet bullet--normal">All levels</span>
+						</div>
+						<div class="medium-card__main-details">
+							<h3 class="medium-card__title">Football</h3>
+							<div class="stats">
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#participants"></use>
+									</svg>
+									<span>1.1K+</span>
+								</div>
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#location"></use>
+									</svg>
+									<span>Club 1</span>
+								</div>
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#distance"></use>
+									</svg>
+									<span>3.2KM</span>
+								</div>
+							</div>
+							<div class="rating--sec-olive">
+								<div class="rating__reviews">
+									<img
+										src="img/male/uifaces-popular-image (1).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (2).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (3).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (4).webp"
+										alt="custemer review"
+									/>
+								</div>
+								<div class="rating__stars">
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="medium-card__description">
+								Join the game! Open to ages 12-45 and all skill levels. Whether
+								you're a beginner or a pro, there's a spot for you on the field.
+							</p>
+
+							<div class="growing-link">
+								<a href="#">
+									<div class="growing-link__text" title="Get Started"></div>
+									<div class="growing-link__icon">
+										<svg>
+											<use xlink:href="/sprite.svg#chevron-right"></use>
+										</svg>
+									</div>
+								</a>
+							</div>
+						</div>
+					</article>
+					<article class="medium-card">
+						<div class="medium-card__img">
+							<img src="img/card2.webp" alt="Football" />
+						</div>
+						<div class="bullets">
+							<span class="bullet bullet--normal">12 - 45 Years</span>
+							<span class="bullet bullet--normal">Beginner</span>
+							<span class="bullet bullet--normal">Intermediate</span>
+							<span class="bullet bullet--normal">Recorded</span>
+						</div>
+						<div class="medium-card__main-details">
+							<h3 class="medium-card__title">Tennis</h3>
+							<div class="stats">
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#participants"></use>
+									</svg>
+									<span>210+</span>
+								</div>
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#location"></use>
+									</svg>
+									<span>Club 2</span>
+								</div>
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#distance"></use>
+									</svg>
+									<span>4.4KM</span>
+								</div>
+							</div>
+							<div class="rating--sec-olive">
+								<div class="rating__reviews">
+									<img
+										src="img/male/uifaces-popular-image (1).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (2).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (3).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (4).webp"
+										alt="custemer review"
+									/>
+								</div>
+								<div class="rating__stars">
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="medium-card__description">
+								Ready to rally? Ages 12-45, beginner to intermediate. Whether
+								you're learning the basics or refining your skills, the court is
+								yours.
+							</p>
+
+							<div class="growing-link">
+								<a href="#">
+									<div class="growing-link__text" title="Get Started"></div>
+									<div class="growing-link__icon">
+										<svg>
+											<use xlink:href="/sprite.svg#chevron-right"></use>
+										</svg>
+									</div>
+								</a>
+							</div>
+						</div>
+					</article>
+					<article class="medium-card">
+						<div class="medium-card__img">
+							<img src="img/card3.webp" alt="Swimming" />
+						</div>
+						<div class="bullets">
+							<span class="bullet bullet--normal">12 - 50 Years</span>
+							<span class="bullet bullet--normal">All levels</span>
+						</div>
+						<div class="medium-card__main-details">
+							<h3 class="medium-card__title">Swimming</h3>
+							<div class="stats">
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#participants"></use>
+									</svg>
+									<span>190</span>
+								</div>
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#location"></use>
+									</svg>
+									<span>Club 3</span>
+								</div>
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#distance"></use>
+									</svg>
+									<span>6.1KM</span>
+								</div>
+							</div>
+							<div class="rating--sec-olive">
+								<div class="rating__reviews">
+									<img
+										src="img/male/uifaces-popular-image (1).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (2).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (3).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (4).webp"
+										alt="custemer review"
+									/>
+								</div>
+								<div class="rating__stars">
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="medium-card__description">
+								Make a splash! Ages 10-50, open to all skill levels. Whether for
+								fun or fitness, dive into the pool with us.
+							</p>
+
+							<div class="growing-link">
+								<a href="#">
+									<div class="growing-link__text" title="Get Started"></div>
+									<div class="growing-link__icon">
+										<svg>
+											<use xlink:href="/sprite.svg#chevron-right"></use>
+										</svg>
+									</div>
+								</a>
+							</div>
+						</div>
+					</article>
+					<article class="medium-card">
+						<div class="medium-card__img">
+							<img src="img/card4.webp" alt="Basketball" />
+						</div>
+						<div class="bullets">
+							<span class="bullet bullet--normal">10 - 40 Years</span>
+							<span class="bullet bullet--normal">All levels</span>
+						</div>
+						<div class="medium-card__main-details">
+							<h3 class="medium-card__title">Basketball</h3>
+							<div class="stats">
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#participants"></use>
+									</svg>
+									<span>140</span>
+								</div>
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#location"></use>
+									</svg>
+									<span>Club 4</span>
+								</div>
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#distance"></use>
+									</svg>
+									<span>6.1KM</span>
+								</div>
+							</div>
+							<div class="rating--sec-olive">
+								<div class="rating__reviews">
+									<img
+										src="img/male/uifaces-popular-image (1).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (2).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (3).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (4).webp"
+										alt="custemer review"
+									/>
+								</div>
+								<div class="rating__stars">
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+							<p class="medium-card__description">
+								Hit the court! Ages 14-40, open to all skill levels. From casual
+								games to competitive play, everyone's welcome.
+							</p>
+
+							<div class="growing-link">
+								<a href="#">
+									<div class="growing-link__text" title="Get Started"></div>
+									<div class="growing-link__icon">
+										<svg>
+											<use xlink:href="/sprite.svg#chevron-right"></use>
+										</svg>
+									</div>
+								</a>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="card-doodles">
+					<svg class="card-doodle">
+						<use xlink:href="/sprite.svg#card-doodles"></use>
+					</svg>
+					<svg class="card-doodle">
+						<use xlink:href="/sprite.svg#card-doodles"></use>
+					</svg>
+					<svg class="card-doodle">
+						<use xlink:href="/sprite.svg#card-doodles"></use>
+					</svg>
+				</div>
+				<div class="slider__buttons">
+					<button class="button__before" aria-label="Before">
+						<svg>
+							<use xlink:href="/sprite.svg#chevron-left"></use>
+						</svg>
+					</button>
+					<button class="button__next" aria-label="Next">
+						<svg>
+							<use xlink:href="/sprite.svg#chevron-right"></use>
+						</svg>
+					</button>
+				</div>
+			</section>
+			<section class="events">
+				<h2 class="events__title">Upcoming Events</h2>
+
+				<div class="gallery">
+					<article class="big-card">
+						<div class="big-card__img">
+							<img src="./img/Hero-3.33x.webp" alt="cycling event" />
+						</div>
+
+						<div class="big-card__details">
+							<h3 class="big-card__title">Cycling</h3>
+							<div class="bullets">
+								<div class="bullet bullet--normal">All levels</div>
+							</div>
+							<div class="stats">
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#participants"></use>
+									</svg>
+									<span>140</span>
+								</div>
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#location"></use>
+									</svg>
+									<span>National Park</span>
+								</div>
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#distance"></use>
+									</svg>
+									<span>8.1KM</span>
+								</div>
+							</div>
+							<div class="rating rating--main-olive">
+								<div class="rating__reviews">
+									<img
+										src="img/male/uifaces-popular-image (1).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (2).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (3).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (4).webp"
+										alt="custemer review"
+									/>
+								</div>
+								<div class="rating__stars">
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+
+							<a href="#" class="btn big-card__btn"
+								>Explore
+								<svg class="">
+									<use xlink:href="/sprite.svg#right-arrow"></use>
+								</svg>
+							</a>
+						</div>
+					</article>
+
+					<article class="big-card">
+						<div class="big-card__img">
+							<img src="./img/event2.webp" alt="cycling event" />
+						</div>
+
+						<div class="big-card__details">
+							<h3 class="big-card__title">Marathon</h3>
+							<div class="bullets">
+								<div class="bullet bullet--normal">All levels</div>
+								<div class="bullet bullet--female">
+									<svg>
+										<use xlink:href="/sprite.svg#female"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="stats">
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#participants"></use>
+									</svg>
+									<span>140</span>
+								</div>
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#location"></use>
+									</svg>
+									<span>Local park</span>
+								</div>
+								<div class="stat">
+									<svg>
+										<use xlink:href="/sprite.svg#distance"></use>
+									</svg>
+									<span>2.1KM</span>
+								</div>
+							</div>
+							<div class="rating rating--main-olive">
+								<div class="rating__reviews">
+									<img
+										src="img/male/uifaces-popular-image (1).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (2).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (3).webp"
+										alt="custemer review"
+									/>
+									<img
+										src="img/male/uifaces-popular-image (4).webp"
+										alt="custemer review"
+									/>
+								</div>
+								<div class="rating__stars">
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+									<svg class="rating__star">
+										<use xlink:href="/sprite.svg#star"></use>
+									</svg>
+								</div>
+							</div>
+
+							<a href="#" class="btn big-card__btn"
+								>Explore
+								<svg class="">
+									<use xlink:href="/sprite.svg#right-arrow"></use>
+								</svg>
+							</a>
+						</div>
+					</article>
+				</div>
+				<a class="btn btn--olive events__btn" href="#">View more</a>
+
+				<svg class="events__doodle-1">
+					<use xlink:href="/sprite.svg#doodle-arrow-bottom"></use>
+				</svg>
+				<svg class="events__doodle-2">
+					<use xlink:href="/sprite.svg#doodle-arrow-top"></use>
+				</svg>
+			</section>
+			<section class="how">
+				<h2 class="how__title">How it Works</h2>
+				<div class="how__contents">
+					<div class="how__content">
+						<svg class="how__icon">
+							<use xlink:href="/sprite.svg#location-detection"></use>
+						</svg>
+						<span class="how__index">01</span>
+						<span class="how__title">
+							Automatic Location <br />
+							Detection
+						</span>
+						<p class="how__text">
+							Sportify instantly checks your location and displays the sports
+							and events closest to you. No searching needed—just let Sportify
+							do the work.
+						</p>
+					</div>
+					<div class="how__content">
+						<svg class="how__icon">
+							<use xlink:href="/sprite.svg#sports"></use>
+						</svg>
+						<span class="how__index">02</span>
+						<span class="how__title">
+							Discover Nearby <br />
+							Sports
+						</span>
+						<p class="how__text">
+							Explore a variety of sports and activities tailored to your
+							interests and skill level, all happening near you.
+						</p>
+					</div>
+					<div class="how__content">
+						<svg class="how__icon">
+							<use xlink:href="/sprite.svg#join-group"></use>
+						</svg>
+						<span class="how__index">03</span>
+						<span class="how__title">Join & Play <br /></span>
+						<p class="how__text">
+							Pick an event, sign up, and get ready to play. From casual games
+							to serious matches, Sportify connects you with the perfect
+							opportunity.
+						</p>
+					</div>
+					<div class="how__content">
+						<svg class="how__icon">
+							<use xlink:href="/sprite.svg#stay-updated"></use>
+						</svg>
+						<span class="how__index">04</span>
+						<span class="how__title">Stay Updated <br /></span>
+						<p class="how__text">
+							Get notifications about new events, connect with other players,
+							and track your progress—all in one place with Sportify.
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer container">
+			<nav class="footer__nav">
+				<a href="#" title="sportify">
+					<svg class="footer__logo">
+						<use xlink:href="sprite.svg#logo"></use>
+					</svg>
+				</a>
+
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a class="footer__link" href="#">Home</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="#">Sports</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="#">Events</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="#">Contact Us</a>
+					</li>
+				</ul>
+			</nav>
+			<form action="#">
+				<div class="newsletter">
+					<label for="newsletter" class="">Subscribe to our newsletter</label>
+					<input
+						type="email"
+						placeholder="sedra@sportify.com"
+						name="newsletter"
+						id="newsletter"
+						required
+					/>
+					<button type="submit">Subscribe</button>
+				</div>
+			</form>
+
+			<div class="footer__cta">
+				<span
+					>Join the <br />
+					Community</span
+				>
+				<a href="#" class="cta__icon" aria-label="Join The Community">
+					<svg>
+						<use xlink:href="sprite.svg#arrow-top-right"></use>
+					</svg>
+				</a>
+			</div>
+		</footer>
+
+		<script>
+			/* -------start of sports section------- */
+			const beforeButton = document.querySelector(".button__next");
+			const nextButton = document.querySelector(".button__before");
+			const slider = document.querySelector(".slider");
+			const cards = document.querySelectorAll(".medium-card, .medium-card--mt");
+			const cardDoodles = document.querySelector(".card-doodles");
+
+			let currentIndex = 0;
+
+			// Function to retrieve the dynamic rem value
+			function getRemValue() {
+				return parseFloat(getComputedStyle(document.documentElement).fontSize);
+			}
+
+			beforeButton.addEventListener("click", () => {
+				if (currentIndex > 0) {
+					currentIndex--;
+					updateSlider();
+				}
+			});
+
+			nextButton.addEventListener("click", () => {
+				if (currentIndex < cards.length - 3) {
+					currentIndex++;
+					updateSlider();
+				}
+			});
+
+			function updateSlider() {
+				// Dynamically retrieve the gap value in pixels
+				const gap = parseFloat(getComputedStyle(slider).gap);
+
+				// Calculate slide width dynamically based on rem value
+				const slideWidth = cards[0].clientWidth + gap;
+
+				const maxVisibleIndex = Math.max(
+					0,
+					cards.length - Math.ceil(slider.clientWidth / slideWidth)
+				);
+
+				currentIndex = Math.min(currentIndex, maxVisibleIndex);
+
+				let translateValue = currentIndex * slideWidth;
+
+				const screenWidth = window.innerWidth;
+
+				// Adjust compensation value based on rem and screen width
+				if (screenWidth < 132 * getRemValue()) {
+					const compensationValue = Math.max(
+						0,
+						132 * getRemValue() - screenWidth
+					);
+					translateValue += compensationValue;
+				}
+
+				slider.style.transform = `translateX(-${translateValue}px)`;
+
+				compensateDoodles();
+			}
+
+			function compensateDoodles() {
+				const screenWidth = window.innerWidth;
+
+				// Dynamically retrieve the gap value in pixels
+				const gap = parseFloat(getComputedStyle(slider).gap);
+				const slideWidth = cards[0].clientWidth + gap;
+
+				let translateValue = 0;
+
+				// Adjust compensation value based on rem and screen width
+				if (screenWidth < 132 * getRemValue()) {
+					const compensationValue = Math.max(
+						0,
+						132 * getRemValue() - screenWidth
+					);
+					translateValue = compensationValue;
+				}
+
+				if (cardDoodles) {
+					cardDoodles.style.transform = `translateX(-${translateValue}px)`;
+				}
+			}
+
+			window.addEventListener("resize", updateSlider);
+			window.addEventListener("load", updateSlider);
+
+			updateSlider(); // Initial call on load
+			/* -------end of sports section------- */
+		</script>
+	</body>
+</html>

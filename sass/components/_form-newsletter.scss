@@ -1,0 +1,55 @@
+form {
+	.newsletter {
+		color: $color-main-olive;
+		background-color: $color-main-cream;
+
+		padding: 0.8rem;
+		border-radius: 100px;
+		position: relative;
+
+		label {
+			color: $color-main-cream;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -110%);
+			text-wrap: nowrap;
+		}
+
+		input {
+			border: none;
+			background-color: $color-main-cream;
+			width: 20rem;
+
+			color: $color-black;
+			font-weight: 500;
+
+			&::placeholder {
+				font-size: 1.2rem;
+			}
+		}
+		button {
+			color: $color-main-cream;
+			background-color: $color-main-olive;
+			padding: $padding;
+
+			border-radius: 100px;
+
+			@include respond-to(medium) {
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+	white-space: nowrap; /* Prevents text from wrapping */
+}

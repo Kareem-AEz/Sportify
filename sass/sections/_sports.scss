@@ -1,0 +1,68 @@
+.sports {
+	display: grid;
+	grid-template-rows: var(--gap-section-title) auto var(--gap-slidder-buttons);
+	grid-template-columns: 1fr 33rem;
+
+	&__title {
+		grid-column: span 2;
+	}
+
+	mask-image: linear-gradient(
+		to right,
+		rgba(white, 0),
+		rgba(white, 1) 5% 95%,
+		rgba(white, 0)
+	);
+}
+
+.slider {
+	grid-column: 1/-1;
+	grid-row: 2/3;
+	align-self: center;
+
+	display: flex;
+	gap: 6.5rem;
+
+	scrollbar-width: none;
+
+	z-index: 3;
+	transition: transform 0.421s $ez-bz;
+
+	position: relative;
+
+	// wasn't genius xD
+	/*&::after {
+		content: "";
+		height: 100%;
+		width: 15rem;
+		background-color: wheat;
+
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform: translateX(105%);
+
+		background-image: linear-gradient(
+			to right,
+			rgba($color-main-olive, 0),
+			rgba($color-main-olive, 1) 60% 100%,
+			rgba($color-main-olive, 0)
+		);
+	}*/
+}
+
+.card-doodles {
+	grid-column: 1/-1;
+	grid-row: 2/3;
+	align-self: center;
+
+	display: flex;
+	gap: 6.5rem;
+}
+.card-doodle {
+	flex: 0 0 33rem;
+	height: 45rem;
+	transform: scale(1.1);
+
+	fill: rgba($color-main-cream, 0.6);
+}

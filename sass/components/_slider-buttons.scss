@@ -1,0 +1,62 @@
+.slider__buttons {
+	grid-column: 2/3;
+	grid-row: 3/4;
+	align-self: end;
+	justify-self: center;
+
+	display: flex;
+	gap: 4.8rem;
+}
+
+.button__before,
+.button__next {
+	z-index: 99;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 4.6rem;
+	width: 4.6rem;
+	border-radius: 50%;
+	background-color: $color-main-cream;
+
+	transition: transform 0.2681s $ez-bz;
+
+	svg {
+		fill: $color-main-olive;
+		height: 2rem;
+		width: 2rem;
+
+		transition: transform 0.381s $ez-bz;
+	}
+}
+
+.button__before {
+	&:hover {
+		transform: scale(1.1);
+
+		svg {
+			transform: scale(1.1) translateX(0.2rem);
+		}
+	}
+	&:active {
+		transform: scale(0.9);
+		svg {
+			transform: scale(0.9) translateX(-0.6rem);
+		}
+	}
+}
+.button__next {
+	&:hover {
+		transform: scale(1.1);
+		svg {
+			transform: scale(1.1) translateX(-0.2rem);
+		}
+	}
+	&:active {
+		transform: scale(0.9);
+		svg {
+			transform: scale(0.9) translateX(0.6rem);
+		}
+	}
+}

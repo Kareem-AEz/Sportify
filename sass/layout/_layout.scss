@@ -1,0 +1,51 @@
+main {
+	overflow: hidden;
+}
+.hero {
+	padding-bottom: var(--gutter);
+	padding-left: var(--gutter-content);
+	padding-right: var(--gutter-content);
+}
+.sports {
+	padding-top: var(--gutter-top);
+	padding-bottom: var(--gutter);
+	padding-left: var(--gutter-content);
+	padding-right: var(--gutter-content);
+	color: $color-main-cream;
+
+	position: relative;
+}
+
+.events {
+	padding-top: var(--gutter-top);
+	padding-bottom: var(--gutter);
+	padding-left: var(--gutter-content);
+	padding-right: var(--gutter-content);
+
+	color: $color-main-olive;
+	background-color: $color-main-cream;
+
+	position: relative;
+}
+
+.how {
+	padding-top: var(--gutter-top);
+	padding-bottom: var(--gutter);
+	padding-left: var(--gutter-content);
+	padding-right: var(--gutter-content);
+
+	color: $color-main-olive;
+	background-color: $color-main-cream;
+
+	position: relative;
+}
+
+.footer {
+	padding-top: var(--gutter-footer);
+	padding-bottom: var(--gutter-footer);
+	padding-left: var(--gutter-content);
+	padding-right: var(--gutter-content);
+	color: $color-main-cream;
+
+	position: relative;
+}

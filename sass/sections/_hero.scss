@@ -1,0 +1,61 @@
+.hero {
+	display: grid;
+	grid-template-rows: minmax(45rem, 40vh);
+	grid-template-columns: max-content minmax(5rem, 1fr) [mini-start] 1fr [mini-end];
+	align-content: end;
+
+	@include respond-to(xsmall) {
+		justify-content: center;
+		justify-items: center;
+	}
+
+	background-image: linear-gradient(
+			rgba($color-sec-olive, 0.35),
+			rgba($color-main-olive, 1) 97%
+		),
+		url(../../img/Hero-5x.webp);
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	padding-top: calc(var(--header-height) + var(--gutter));
+}
+
+.hero {
+	&__content {
+		color: $color-main-cream;
+		align-content: center;
+		h1 {
+			margin-bottom: var(--gap-xs);
+		}
+
+		p {
+			margin-bottom: var(--gap-sm);
+
+			max-width: 40rem;
+		}
+
+		a {
+			font-size: 1.6rem;
+		}
+
+		@include respond-to(xsmall) {
+			grid-column: 1/-1;
+		}
+	}
+
+	&__mini-cards {
+		grid-column: mini-start / mini-end;
+		justify-self: center;
+		align-self: center;
+
+		display: grid;
+		grid-template-rows: 6.5rem 6.5rem 6.5rem;
+		grid-template-columns: 26rem;
+		align-items: center;
+		row-gap: var(--gap-2xs);
+
+		@include respond-to(xsmall) {
+			grid-column: 1 /-1;
+		}
+	}
+}

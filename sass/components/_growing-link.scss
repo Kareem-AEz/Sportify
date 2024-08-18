@@ -1,0 +1,228 @@
+/*		------ Hopeless attamepts------		*/
+/*.medium-card__navigation {
+		grid-row: 5/6;
+		grid-column: 1 /-1;
+		align-self: end;
+
+		a {
+			position: relative;
+
+			&:hover .navigation__text {
+				width: calc(100% + 4.1rem);
+			}
+			&:hover .navigation__icon {
+				right: -4rem;
+			}
+		}
+
+		.navigation__text {
+			display: flex;
+			align-items: center;
+
+			color: $color-main-olive;
+			background-color: $color-main-gold;
+			overflow: hidden;
+			font-weight: 500;
+
+			width: 4.2rem;
+			height: 4.2rem;
+
+			white-space: nowrap;
+			padding: 0.6rem;
+			border-radius: 100px;
+
+			transition: width 0.368s $ez-bz;
+		}
+
+		.navigation__icon {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			height: 4rem;
+			width: 4rem;
+			padding: 0.7rem;
+			border-radius: 50%;
+			background-color: $color-main-olive;
+
+			position: absolute;
+			top: 0.1rem;
+			right: calc(100% - 4.1rem);
+
+			transition: right 0.368s $ez-bz;
+		}
+		svg {
+			fill: $color-main-gold;
+
+			box-sizing: content-box;
+			height: 2rem;
+			width: 2rem;
+		}
+	}*/
+
+/*.link-navigation {
+		grid-row: 5/6;
+		grid-column: 1 /-1;
+		align-self: end;
+		a {
+			display: grid;
+			// grid-template-columns: auto 3rem;
+			align-items: center;
+			justify-content: start;
+			width: fit-content;
+
+			&:hover .link-navigation__text {
+				width: 100%;
+				padding-right: 4rem;
+			}
+			&:hover .link-navigation__text::before {
+				transform: translateX(0%);
+			}
+		}
+
+		&__text {
+			grid-column: 1/-1;
+			grid-row: 1/2;
+
+			display: flex;
+			justify-content: start;
+			align-items: center;
+
+			color: $color-main-olive;
+			background-color: $color-main-gold;
+			position: absolute;
+
+			/*Default Values for open-state/
+			width: 100%;
+			height: 3.8rem;
+			/*Default Values for open-state/
+
+			padding: 0.8rem 1.2rem;
+			padding-right: 4rem;
+			border-radius: 100px;
+			overflow: hidden;
+			white-space: nowrap;
+
+			//adjusting the shape of the text back ground so the icon can be centered
+			padding-right: 1.2rem;
+			width: 3.8rem;
+			transition: padding, width;
+			transition-timing-function: linear;
+			transition-duration: 0.3681s;
+
+			position: relative;
+			&::before {
+				content: "Get Started";
+				transform: translateX(-120%);
+				transition: transform 0.3681s linear;
+			}
+		}
+		&__icon {
+			grid-column: 1/-1;
+			grid-row: 1/2;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			transform: translateX(-0.4rem);
+			width: 3rem;
+			height: 3rem;
+			border-radius: 50%;
+			background-color: $color-main-olive;
+			svg {
+				fill: $color-main-gold;
+				height: 1.2rem;
+				width: 1.2rem;
+			}
+			transform: translateX(0.4rem); // Initial state
+			transform: translateX(9.7rem); // Initial state
+			transition: transform 0.3681s $ez-bz;
+		}
+	}*/
+
+/*		------ yaay ------		*/
+.growing-link {
+	grid-row: 5/6;
+	grid-column: 1 /-1;
+	align-self: end;
+
+	a:link,
+	a:visited {
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+		width: calc(var(--gl-head) + var(--gl-padding) * 2);
+		padding: var(--gl-padding) var(--gl-padding);
+		border-radius: 100px;
+		background-color: $color-main-gold;
+		overflow: hidden;
+
+		transition: width 0.3681s $ez-bz;
+	}
+	a:hover,
+	a:active {
+		& {
+			width: var(--gl-width);
+			.growing-link__text::before {
+				transform: translate(1rem);
+			}
+			.growing-link__icon {
+				transform: translateX(
+					calc(var(--gl-width) - var(--gl-head) - var(--gl-padding) * 2)
+				);
+			}
+		}
+	}
+
+	&__text {
+		color: $color-main-olive;
+
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		&::before {
+			content: "Get Started";
+			font-weight: 600;
+
+			position: absolute;
+			transform: translateX(-120%);
+
+			transition: transform 0.3681s $ez-bz;
+		}
+	}
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: var(--gl-head);
+		height: var(--gl-head);
+		border-radius: 50%;
+		background-color: $color-main-olive;
+
+		svg {
+			fill: $color-main-gold;
+			height: 1.2rem;
+			width: 1.2rem;
+			transform: translateX(1px);
+		}
+
+		transition: transform 0.3681s $ez-bz;
+	}
+
+	@media (hover: none) {
+		a {
+			width: var(--gl-width) !important;
+			.growing-link__text::before {
+				transform: translate(1rem);
+			}
+			.growing-link__icon {
+				transform: translateX(
+					calc(var(--gl-width) - var(--gl-head) - var(--gl-padding) * 2)
+				);
+			}
+		}
+	}
+}

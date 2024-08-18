@@ -1,0 +1,40 @@
+.bullets {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 0.8rem;
+	flex-wrap: wrap;
+}
+
+.bullet {
+	font-size: 1.2rem;
+	font-weight: 700;
+
+	padding: 0.4rem 1rem;
+	border-radius: 100px;
+
+	user-select: none;
+	pointer-events: none;
+
+	svg {
+		height: 1.6rem;
+		width: 1.6rem;
+	}
+}
+
+.bullet {
+	&--normal {
+		color: $color-main-olive;
+		background-color: $color-main-cream;
+	}
+
+	&--top {
+		color: $color-main-olive;
+		background-color: $color-main-gold;
+	}
+
+	&--female {
+		fill: $color-sec-pink-dark;
+		background-color: $color-sec-pink-light;
+	}
+}

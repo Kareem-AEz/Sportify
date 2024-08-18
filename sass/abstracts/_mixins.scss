@@ -1,0 +1,29 @@
+/* Media Qurey Manager */
+@mixin respond-to($breakpoint, $direction: max) {
+	$breakpoint-value: map-get($breakpoints, $breakpoint);
+
+	@if $breakpoint-value {
+		@if $direction == "max" {
+			@media only screen and (max-width: $breakpoint-value) {
+				@content;
+			}
+		} @else if $direction == "min" {
+			@media only screen and (min-width: $breakpoint-value) {
+				@content;
+			}
+		} @else {
+			@warn "Invalid direction '#{$direction}' for the breakpoint #{$breakpoint}";
+		}
+	} @else {
+		@warn "No value found for breakpoint #{$breakpoint}";
+	}
+}
+
+$breakpoints: (
+	large: 75em,
+	medium: 58em,
+	small: 47em,
+	xsmall: 38.75em,
+	2xsmall: 30rem,
+	3xsmall: 24em,
+);

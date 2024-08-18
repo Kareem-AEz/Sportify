@@ -1,0 +1,74 @@
+body {
+	font-size: $font-size-default;
+	font-weight: 400;
+
+	color: $color-main-olive;
+	background-color: $color-main-olive;
+
+	overflow-x: hidden;
+}
+
+.btn {
+	&:link,
+	&:visited {
+		font-weight: 600;
+
+		background-color: $color-main-gold;
+		color: $color-main-olive;
+		padding: $padding-default;
+		border-radius: 100px;
+		transition: background-color 0.2s $ez-bz;
+	}
+	&:hover,
+	&:active {
+		background-color: darken($color-main-gold, 7%);
+	}
+
+	&--olive:link,
+	&--olive:visited {
+		color: $color-main-cream;
+		background-color: $color-main-olive;
+	}
+	&--olive:hover,
+	&--olive:active {
+		background-color: lighten($color-main-olive, 7%);
+	}
+}
+
+em {
+	font-weight: 400;
+	font-style: normal;
+}
+
+strong {
+	font-weight: inherit;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+
+		height: 2rem;
+		width: 100%;
+		background-image: url(../../SVGs/compressed/strong-line.svg);
+		// background-image: url("../../sprite.svg#strong-line");
+
+		background-size: contain;
+		background-repeat: no-repeat;
+		bottom: -0.2rem;
+		left: 0;
+	}
+}
+
+::selection {
+	color: $color-main-cream;
+	background-color: $color-sec-olive;
+}
+
+*:focus {
+	outline: none;
+
+	// outline: $color-main-gold solid 0.4rem;
+	// outline-offset: 0.2rem;
+	box-shadow: 0 0 0 0.4rem $color-main-gold;
+}
