@@ -1,21 +1,17 @@
 let deferredPrompt;
-const installButton = document.querySelector(".install-button"); // Assume you have a button with this class
+const installButton = document.querySelector(".install-button"); // Your install button
+const iosInstallMessage = document.querySelector(".ios-install-message"); // Your iOS install message
 
+// Handle the beforeinstallprompt event (for Android)
 window.addEventListener("beforeinstallprompt", (e) => {
-	// Prevent the mini-infobar from appearing on mobile
 	e.preventDefault();
-	// Stash the event so it can be triggered later.
 	deferredPrompt = e;
-	// Display your custom install button
 	installButton.style.display = "block";
 });
 
 installButton.addEventListener("click", (e) => {
-	// Hide the install promotion
 	installButton.style.display = "none";
-	// Show the install prompt
 	deferredPrompt.prompt();
-	// Wait for the user to respond to the prompt
 	deferredPrompt.userChoice.then((choiceResult) => {
 		if (choiceResult.outcome === "accepted") {
 			console.log("User accepted the install prompt");
@@ -30,6 +26,7 @@ window.addEventListener("appinstalled", (evt) => {
 	console.log("Sportify has been installed.");
 });
 
+// Register the service worker
 if ("serviceWorker" in navigator) {
 	navigator.serviceWorker.register("js/service-worker.js").then(
 		(registration) => {
@@ -41,3 +38,15 @@ if ("serviceWorker" in navigator) {
 	);
 }
 
+// Detect iOS and show custom install message if needed
+const isIos = () => {
+	const userAgent = window.navigator.userAgent.toLowerCase();
+	return /iphone|ipad|ipod/.test(userAgent);
+};
+
+const isInStandaloneMode = () =>
+	"standalone" in window.navigator && window.navigator.standalone;
+
+if (isIos() && !isInStandaloneMode()) {
+	iosInstallMessage.style.display = "block";
+}
