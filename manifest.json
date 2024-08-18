@@ -8,14 +8,9 @@
 	"description": "Sportify simplifies finding and joining local sports. Automatically discover nearby activities tailored to your skill level and interests. Play sports effortlessly.",
 	"icons": [
 		{
-			"src": "icons/Sportify-192x192.png",
-			"sizes": "192x192",
-			"type": "image/png"
-		},
-		{
-			"src": "icons/Sportify-512x512.png",
-			"sizes": "512x512",
-			"type": "image/png"
+			"src": "icons/Sportify-icon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml"
 		}
 	]
 }
