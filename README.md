@@ -47,7 +47,7 @@ This project is part of a learning roadmap aimed at mastering full-stack develop
 
 ### Issues Faced
 
-1. **Meta Tags for Social Media Sharing:** Encountered issues with displaying the web image in shared links and Twitter posts. Despite using the correct Open Graph and Twitter Card meta tags, images were not displaying correctly.
+1. **Meta Tags for Social Media Sharing:** Encountered issues with displaying the web image in shared links and social posts. Despite using the correct Open Graph and Twitter Card meta tags, images are not displaying.
    - **Status:** Not Working.
 
 2. **JavaScript Functionality:** Initially had limited experience with JavaScript, which made implementing certain features challenging.
