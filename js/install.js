@@ -40,3 +40,39 @@ if ("serviceWorker" in navigator) {
 		}
 	);
 }
+
+// Check for updates and notify users
+if (navigator.serviceWorker) {
+	navigator.serviceWorker.getRegistrations().then((registrations) => {
+		for (let registration of registrations) {
+			registration.update();
+		}
+	});
+}
+
+// Optionally, listen for update events
+navigator.serviceWorker.addEventListener("controllerchange", () => {
+	console.log(
+		"Service Worker updated, please refresh the page to get the latest version."
+	);
+	// You might want to notify the user here
+});
+
+if ("serviceWorker" in navigator) {
+	navigator.serviceWorker.ready.then((registration) => {
+		registration.onupdatefound = () => {
+			const installingWorker = registration.installing;
+			installingWorker.onstatechange = () => {
+				if (
+					installingWorker.state === "installed" &&
+					navigator.serviceWorker.controller
+				) {
+					// New update available
+					if (confirm("A new version is available. Do you want to update?")) {
+						window.location.reload();
+					}
+				}
+			};
+		};
+	});
+}

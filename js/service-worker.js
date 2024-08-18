@@ -1,11 +1,26 @@
-self.addEventListener('install', (event) => {
-    console.log('Service Worker installing.');
+self.addEventListener("install", (event) => {
+	// Skip waiting so that the new service worker activates immediately
+	self.skipWaiting();
 });
 
-self.addEventListener('activate', (event) => {
-    console.log('Service Worker activating.');
+self.addEventListener("activate", (event) => {
+	event.waitUntil(
+		caches.keys().then((cacheNames) => {
+			return Promise.all(
+				cacheNames.map((cacheName) => {
+					return caches.delete(cacheName);
+				})
+			);
+		})
+	);
 });
 
-self.addEventListener('fetch', (event) => {
-    event.respondWith(fetch(event.request));
+// Fetch event and other service worker logic
+self.addEventListener("fetch", (event) => {
+	// Example fetch handler
+	event.respondWith(
+		caches.match(event.request).then((response) => {
+			return response || fetch(event.request);
+		})
+	);
 });
