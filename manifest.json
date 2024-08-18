@@ -41,11 +41,6 @@
 			"src": "icons/Sportify-512x512.png",
 			"sizes": "512x512",
 			"type": "image/png"
-		},
-		{
-			"src": "icons/Sportify-icon.svg",
-			"sizes": "any",
-			"type": "image/svg+xml"
 		}
 	]
 }
