@@ -135,7 +135,8 @@ body {
   background-color: #033b30;
   overflow-x: hidden; }
 
-.btn:link, .btn:visited {
+.btn:link, .btn:visited, .btn {
+  font-size: 1.6rem;
   font-weight: 600;
   background-color: #f5d31f;
   color: #033b30;
@@ -143,7 +144,7 @@ body {
   border-radius: 100px;
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0.4, 1); }
 
-.btn:hover, .btn:active {
+.btn:hover, .btn:active, .btn {
   background-color: #e6c30a; }
 
 .btn--olive:link, .btn--olive:visited {
@@ -493,13 +494,13 @@ p {
       height: 1.2rem;
       width: 1.2rem;
       transform: translateX(1px); }
-  @media (hover: none) {
+  @media (hover: none) and (pointer: coarse) {
     .growing-link a {
       width: var(--gl-width) !important; }
-      .growing-link a .growing-link__text::before {
-        transform: translate(1rem); }
-      .growing-link a .growing-link__icon {
-        transform: translateX(calc(var(--gl-width) - var(--gl-head) - var(--gl-padding) * 2)); } }
+    .growing-link .growing-link__text::before {
+      transform: translate(1rem); }
+    .growing-link .growing-link__icon {
+      transform: translateX(calc(var(--gl-width) - var(--gl-head) - var(--gl-padding) * 2)); } }
 
 .mini-card {
   display: grid;
@@ -977,6 +978,7 @@ main {
     fill: #f9f5e9; }
   .footer__list {
     display: flex;
+    align-items: center;
     gap: var(--gap-2xs); }
   .footer form {
     grid-row: form-start / form-end;
