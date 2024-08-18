@@ -3,7 +3,7 @@
 	"short_name": "Sportify",
 	"start_url": "index.html",
 	"display": "standalone",
-	"background_color": "#f9f5e9",
+	"background_color": "#033b30",
 	"theme_color": "#033b30",
 	"description": "Sportify simplifies finding and joining local sports. Automatically discover nearby activities tailored to your skill level and interests. Play sports effortlessly.",
 	"icons": [
