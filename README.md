@@ -17,7 +17,7 @@ Sportify is designed to simulate a platform where users can discover and track s
 - **Responsive Design:** Adapts seamlessly across desktop, tablet, and mobile devices.
 - **Custom SVG Icons:** Created with Adobe Illustrator and sourced from Flaticon for enhanced visual appeal.
 - **Progressive Web App (PWA):** Installable on devices for offline access and an app-like experience.
-- **UI Design in Figma:** Crafted in Figma with inspiration from Pinterest and Dribbble. View the design [here](https://www.figma.com/design/pOLsZqtfokZ0PmLqIGFFK8/Sportify?t=9sMM6aZWvSXga6q4-0).
+- **UI Design in Figma:** Crafted in Figma with inspiration from Pinterest and Dribbble. View the design [here](https://www.figma.com/design/pOLsZqtfokZ0PmLqIGFFK8/Sportify?t=9sMM6aZWvSXga6q4-1).
 
 ## Tools and Technologies
 
@@ -48,7 +48,7 @@ This project is part of a learning roadmap aimed at mastering full-stack develop
 ### Issues Faced
 
 1. **Meta Tags for Social Media Sharing:** Encountered issues with displaying the web image in shared links and Twitter posts. Despite using the correct Open Graph and Twitter Card meta tags, images were not displaying correctly.
-   - **Status:** Ongoing troubleshooting.
+   - **Status:** Not Working.
 
 2. **JavaScript Functionality:** Initially had limited experience with JavaScript, which made implementing certain features challenging.
    - **Resolution:** Used ChatGPT to generate JavaScript functionalities and gained valuable experience through practice.
