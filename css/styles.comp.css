@@ -144,7 +144,7 @@ body {
   border-radius: 100px;
   transition: background-color 0.2s cubic-bezier(0.2, 0, 0.4, 1); }
 
-.btn:hover, .btn:active, .btn {
+.btn:hover, .btn:active, .btn:hover {
   background-color: #e6c30a; }
 
 .btn--olive:link, .btn--olive:visited {
@@ -980,6 +980,8 @@ main {
     display: flex;
     align-items: center;
     gap: var(--gap-2xs); }
+    .footer__list .btn {
+      font-size: 1.4rem; }
   .footer form {
     grid-row: form-start / form-end;
     justify-self: center; }
