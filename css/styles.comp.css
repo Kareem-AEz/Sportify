@@ -178,7 +178,17 @@ strong {
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 0 0.4rem #f5d31f; }
+  box-shadow: 0 0 0 0.2rem #f9f5e9; }
+
+.button-next:focus,
+.button-before:focus {
+  box-shadow: 0 0 0 0.2rem #f5d31f; }
+
+.btn--olive:focus {
+  box-shadow: 0 0 0 0.2rem #f5d31f; }
+
+input:focus {
+  box-shadow: 0 0 0 0.2rem #033b30; }
 
 h1 {
   font-size: 4.4rem;
@@ -700,8 +710,8 @@ p {
   display: flex;
   gap: 4.8rem; }
 
-.button__before,
-.button__next {
+.button-before,
+.button-next {
   z-index: 99;
   display: flex;
   justify-content: center;
@@ -711,31 +721,31 @@ p {
   border-radius: 50%;
   background-color: #f9f5e9;
   transition: transform 0.2681s cubic-bezier(0.2, 0, 0.4, 1); }
-  .button__before svg,
-  .button__next svg {
+  .button-before svg,
+  .button-next svg {
     fill: #033b30;
     height: 2rem;
     width: 2rem;
     transition: transform 0.381s cubic-bezier(0.2, 0, 0.4, 1); }
 
-.button__before:hover {
+.button-before:hover {
   transform: scale(1.1); }
-  .button__before:hover svg {
+  .button-before:hover svg {
     transform: scale(1.1) translateX(0.2rem); }
 
-.button__before:active {
+.button-before:active {
   transform: scale(0.9); }
-  .button__before:active svg {
+  .button-before:active svg {
     transform: scale(0.9) translateX(-0.6rem); }
 
-.button__next:hover {
+.button-next:hover {
   transform: scale(1.1); }
-  .button__next:hover svg {
+  .button-next:hover svg {
     transform: scale(1.1) translateX(-0.2rem); }
 
-.button__next:active {
+.button-next:active {
   transform: scale(0.9); }
-  .button__next:active svg {
+  .button-next:active svg {
     transform: scale(0.9) translateX(0.6rem); }
 
 .stats {
@@ -832,12 +842,13 @@ form .newsletter {
   .header__list {
     display: flex;
     align-items: center;
-    gap: var(--gap-sm); }
+    gap: var(--gap-xs); }
     @media only screen and (max-width: 38.75em) {
       .header__list {
         display: none; } }
   .header__item {
-    position: relative; }
+    position: relative;
+    font-weight: 500; }
     .header__item:not(:last-child):after {
       content: "";
       border-bottom: 2px solid currentColor;
@@ -1062,7 +1073,7 @@ main {
   grid-template-rows: minmax(45rem, 40vh);
   grid-template-columns: max-content minmax(5rem, 1fr) [mini-start] 1fr [mini-end];
   align-content: end;
-  background-image: linear-gradient(rgba(49, 73, 68, 0.35), #033b30 97%), url(../img/Hero-5x.webp);
+  background-image: linear-gradient(rgba(49, 73, 68, 0.45), #033b30 97%), url(../img/Hero-5x.webp);
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: calc(var(--header-height) + var(--gutter)); }
