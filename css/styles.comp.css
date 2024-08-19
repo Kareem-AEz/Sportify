@@ -177,18 +177,18 @@ strong {
   background-color: #314944; }
 
 *:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.2rem #f9f5e9; }
+  outline: #f9f5e9 solid 0.2rem;
+  outline-offset: -0.2rem; }
 
 .button-next:focus,
 .button-before:focus {
-  box-shadow: 0 0 0 0.2rem #f5d31f; }
+  outline-color: #f5d31f; }
 
 .btn--olive:focus {
-  box-shadow: 0 0 0 0.2rem #f5d31f; }
+  outline-color: #f5d31f; }
 
 input:focus {
-  box-shadow: 0 0 0 0.2rem #033b30; }
+  outline-color: #033b30; }
 
 h1 {
   font-size: 4.4rem;
